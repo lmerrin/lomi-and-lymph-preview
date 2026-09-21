@@ -34,9 +34,13 @@
   .site-nav.open > a:not(.button) {
     display: block;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 0;
     font-size: clamp(1.45rem, 7vw, 2rem);
     line-height: 1.2;
+  }
+
+  .site-nav a[aria-current="true"]:not(.button)::after {
+    display: none;
   }
 
   .site-nav.open .button {
