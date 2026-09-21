@@ -1,0 +1,100 @@
+/* Revision 1: service layout, contact map and footer refinements */
+.service-grid {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.service-card {
+  min-height: 0;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.service-card h3 {
+  margin: 0 0 1rem;
+}
+
+.service-card p {
+  margin: 0 0 1.5rem;
+}
+
+.service-card .service-button {
+  width: fit-content;
+  margin-top: auto;
+  padding-inline: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info h2 {
+  white-space: normal;
+}
+
+.contact-list .icon svg,
+.instagram-link svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-map {
+  height: 18rem;
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.footer-brand img {
+  width: 4.75rem;
+  height: 3.2rem;
+  object-fit: contain;
+}
+
+.instagram-link {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 50%;
+}
+
+.instagram-link .icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #dfbd77;
+}
+
+@media (min-width: 700px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  }
+
+  .contact-info h2 {
+    white-space: nowrap;
+    font-size: clamp(3rem, 4.2vw, 4.25rem);
+  }
+}
